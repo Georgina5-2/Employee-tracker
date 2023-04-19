@@ -38,3 +38,9 @@
 Go to Github.com, create a public account, and go to 'Create Repository' at the top right corner of the page
 
 ![Screenshot_20230214_103135](https://user-images.githubusercontent.com/122113060/218920561-09bcec22-68c1-49e5-97d9-f9e90d15781b.png)
+
+Click on the tab 'Code' and copy the link to the repository
+
+<img width="354" alt="Screenshot 2023-04-18 230321" src="https://user-images.githubusercontent.com/122113060/232956587-a3018e0d-d17f-42f0-a58a-30fd9e7134eb.png">
+
+

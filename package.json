@@ -1,14 +1,22 @@
 {
   "name": "employee-tracker",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "inquirer": "^9.2.7",
+    "mysql2": "^3.3.3"
+  },
+  "devDependencies": {},
+  "keywords": [],
+  "description": ""
 }

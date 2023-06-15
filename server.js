@@ -1,69 +1,72 @@
-import sql from 'mysql2';
-import inquirer from 'inquirer';
-//import 'dotenv/config';
-//import 'console.table';
+const mysql = require("mysql2");
+const inquirer = require("inquirer");
+require('dotenv').config();
+//require("console.table");
 
-import {
-    initQuestion,
-    deptQuestion,
-    roleQuestion,
-    employeeQuestion,
-    roleUpdateQuestion,
-    employeeName,
-} from "./lib/questions.js";
+//const { deptQuestion, roleQuestion, employeeQuestion, roleUpdateQuestion, employeeName} = require("./lib/questions");
 
-const db = sql.createConnection(
+const db = mysql.createConnection(
     {
-        host: "localhost",
+        host: 'localhost',
         user: process.env.DB_USER,
         password: process.env.DB_PASSWORD,
-        database: process.env.DB_NAME,
-    },
-    console.log("Connected to the employee database")
+        database: process.env.DB_NAME
+      },
+      console.log(`Connected to the employees_db database.`)
 );
 
-initQuery();
+
+const initQuestion = [
+    {
+        type: "list",
+        name: "intro",
+        message: "What would you like to do?",
+        choices: ["View all departments", "View all roles", "View all employees", "View all employees by department", "Add a department", "Add a role", "Add an employee", "Update an employee's role", "Remove an employee", "Exit"]
+    }
+];
 
 function initQuery() {
+    console.log('entering');
     inquirer.prompt(initQuestion).then(({ intro }) => {
-        handleInitQuery(intro);
-    });
-}
+//         handleInitQuery(intro);
+//     });
+// }
 
-function handleInitQuery(intro) {
+// function handleInitQuery(intro) {
+    console.log('intro',intro);
     switch (intro) {
         case "View all departments":
-            viewAllDepartments();
-            break;
+            return viewAllDepartments();
+           
         case "View all roles":
             viewAllRoles();
-            break;
+            return;
         case "View all employees":
             viewAllEmployees();
-            break;
+            return;
         case "View all employees by department":
             viewEmployeeByDept();
-            break;
+            return;
         case "Add a department":
             handleDeptQuery();
-            break;
+            return;
         case "Add a role":
             handleRoleQuery();
-            break;
+            return;
         case "Add an employee":
             handleEmployeeQuery();
-            break;
+            return;
         case "Update an employee's role":
             handleRoleUpdateQuery();
-            break;
+            return;
         case "Remove an employee":
             handleEmployeeRemove();
-            break;
+            return;
         case "Exit":
             db.end();
-            break;
-    }
-}
+            return;
+    //}
+    }})}
 
 function handleDeptQuery() {
     inquirer.prompt(deptQuestion).then(({ deptName }) => {
@@ -98,6 +101,7 @@ function handleEmployeeRemove() {
 }
 
 function viewAllDepartments() {
+    console.log('departments');
     const sql = `SELECT * FROM department ORDER BY id`;
     db.query(sql, (err, res) => {
         console.table(`\nList of all roles with ID,salary and department`, res);
@@ -209,3 +213,5 @@ function removeEmployee(fName, lName) {
     });
     viewAllEmployees();
 }
+
+initQuery();

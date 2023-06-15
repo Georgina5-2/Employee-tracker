@@ -11,10 +11,12 @@
   },
   "author": "",
   "license": "ISC",
-  "type": "module",
+  
   "dependencies": {
-    "inquirer": "^9.2.7",
-    "mysql2": "^3.3.3"
+    "inquirer": "^8.2.4",
+    "mysql2": "^2.1.0",
+    "console.table": "^0.10.0",
+    "dotenv": "^16.0.3"
   },
   "devDependencies": {},
   "keywords": [],

@@ -31,6 +31,8 @@
 * Version Control Systems - Git and Github
 * Coding Platform - Microsoft Visual Studio Code *Programming languages - HTML *Stylesheets - CSS *Script-file - Javascript
 * Commands - Git and MS-DOS commands
+* Server - node.js
+* Database - MYSQL
 ### Installations and Repository creations
 * Install - Gitbash, Microsoft Visual Studio Code
 * Repository - Go to 'Github.com' and create a public repository in your Github account
@@ -42,5 +44,32 @@ Go to Github.com, create a public account, and go to 'Create Repository' at the 
 Click on the tab 'Code' and copy the link to the repository
 
 <img width="354" alt="Screenshot 2023-04-18 230321" src="https://user-images.githubusercontent.com/122113060/232956587-a3018e0d-d17f-42f0-a58a-30fd9e7134eb.png">
+
+# Screenshots
+
+
+
+
+
+<img width="924" alt="Screenshot2" src="https://github.com/Georgina5-2/Employee-tracker/assets/122113060/209c36c3-37ed-425e-86d0-3fcdf48309a2">
+
+
+
+<img width="957" alt="Screenshot3" src="https://github.com/Georgina5-2/Employee-tracker/assets/122113060/55975fef-148a-46db-9ff1-7227af722a48">
+
+
+ # Acknowledgements : 
+
+* Inquirer -  https://www.npmjs.com/
+
+* MySQL -https://dev.mysql.com/doc/
+
+# Link to the video of the file execution:
+
+https://drive.google.com/file/d/1M-tssbi6jp0J40pi5wxXJR6PGGZibAiW/view?usp=drive_link
+
+
+
+
 
 
